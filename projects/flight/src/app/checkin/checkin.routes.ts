@@ -1,11 +1,16 @@
 import { Routes } from "@angular/router";
 import { PassengerEditComponent, PassengerSearchComponent } from "./feature-passenger";
 import { MilesComponent } from "./feature-miles";
+import { provideNavigationConfig } from "../shared/logic-navigation";
+import { CHECKIN_NAVIGATION } from "./checkin.navigation";
 
 
 export const CHECKIN_ROUTES: Routes = [
   {
     path: '',
+    providers: [
+      provideNavigationConfig(CHECKIN_NAVIGATION)
+    ],
     children: [
       {
         path: '',

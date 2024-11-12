@@ -8,6 +8,9 @@ import { LUGGAGE_NAVIGATION } from './luggage.navigation';
 export const LUGGAGE_ROUTES: Routes = [
   {
     path: '',
+    providers: [
+      provideNavigationConfig(LUGGAGE_NAVIGATION)
+    ],
     children: [
       {
         path: '',
